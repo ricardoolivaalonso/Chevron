@@ -1,0 +1,43 @@
+.About{
+    &-mainTitle{
+        margin-bottom: $gap;
+    }
+    &-item{
+        width: 100%;
+        max-width: 800px;
+        padding: 0 $gap;
+        &:hover  .About-description{
+            visibility: visible;
+            opacity: 1;
+            height: auto;
+            transition:
+                $transition .1s,
+                opacity .8s ease .4s
+            ;
+        }
+    }
+    &-title{
+        margin-bottom: 10px;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 1;
+        text-align: center;
+        cursor: pointer;
+        color: $blue-2;
+
+        @media (min-width: $mq2){ font-size: 48px; }
+        @media (min-width: $mq3){ font-size: 66px; }
+    }
+    &-description{
+        text-align: center;
+        font-size: 18px;
+        line-height: 26.4px;
+        font-weight: 400;
+        font-family: 'GothamPro-500', sans-serif;
+
+        visibility: hidden;
+        opacity: .2;
+        height: 0;
+        transform-origin: top;
+    }
+}

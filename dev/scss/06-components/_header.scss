@@ -1,0 +1,61 @@
+.Menu{
+    width: 100%;
+
+    &-list{
+        width: 100%;
+        @include flex(flex, space-between, center, row, nowrap);
+
+        @media(min-width: $mq2 ){
+            @include flex(flex, center, center, row, nowrap);
+        }
+    }
+    &-icon{
+        object-fit: contain;
+        width: 30px;
+        @media(min-width: $mq2 ){ display: none; }
+    }
+    &-logo{
+        object-fit: contain;
+        width: 45px;
+        margin: 15px;
+    }
+    &-link{
+        @include flex(flex, center, center, row, nowrap);
+        font-size: 11px;
+        padding: 0 10px;
+        position: relative;
+        display: none;
+
+        @media(min-width: $mq2 ){
+            font-size: 12px;
+            padding: 0 15px;
+            display: inherit;
+        }
+        @media(min-width: $mq3 ){
+            font-size: 13.3px;
+            padding: 0 20px;
+        }
+        @media(min-width: $mq4 ){
+            line-height: 20px;
+            font-weight: 500;
+            padding: 0 $gap;
+
+            &::before{
+                content: '';
+                position: absolute;
+                bottom: -2px;
+                left: $gap;
+                width: 0;
+                height: 2px;
+                background-color: $cyan;
+                transition: $transition;
+            }
+            &:hover::before{
+                width: calc(100% - #{$gap * 2} );
+                transition: $transition;
+
+            }
+
+        }
+    }
+}

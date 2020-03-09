@@ -1,0 +1,55 @@
+.News{
+
+
+    &-mainTitle{
+        margin-top: $gap-2;
+    }
+    &-mainTitle,
+    &-title{
+        font-size: 32px;
+        line-height: 40px;
+        font-weight: 700;
+        color: $white;
+        margin-bottom: $gap;
+    }
+    &-content{
+        width: 100%;
+        max-width: 590px;
+    }
+    &-card{
+
+        &Container{
+            width: 100%;
+            @include flex(flex, center, center, column, wrap);
+        }
+        @include flex(flex, center, center, column, wrap);
+        width: 100%;
+        padding: $gap $gap 0;
+        cursor: pointer;
+        &:hover{
+            transition: $transition;
+            background-color: $blue-1;
+            .News-date{ color: $white; }
+        }
+    }
+    &-date{
+        font-size: 14px;
+        line-height: 24px;
+        color: $blue-1;
+    }
+    &-title{
+        font-size: 24px;
+        line-height: 30px;
+        margin: 10px 0;
+    }
+
+    &-description{
+        font-size: 16px;
+        line-height: 24px;
+        color: $white;
+        font-family: 'GothamPro-400', sans-serif;
+        margin-bottom: $gap;
+
+    }
+    &-button{ margin-bottom: $gap-2; }
+}

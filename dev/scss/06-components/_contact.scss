@@ -1,0 +1,64 @@
+.Contact{
+    &-left,
+    &-right{
+        width: 100%;
+        @include flex(flex, center, center, column, wrap);
+    }
+    &-slogan{
+        object-fit: contain;
+        width: 180px;
+    }
+    &-description{
+        width: 100%;
+        font-size: 16px;
+        line-height: 32px;
+        font-family: 'GothamPro-400', sans-serif;
+        text-align: center;
+        margin: $gap 0;
+        @media (min-width: $mq2){ max-width: 600px; }
+        @media (min-width: $mq3){ margin: $gap 0; }
+    }
+    &-list{
+        width: 100%;
+        @include flex(flex, center, center, column, wrap);
+        @media (min-width: $mq2){
+            @include flex(flex, center, center, row, wrap);
+        }
+    }
+    &-title{
+        margin: $gap;
+        font-size: 16px;
+        @media (min-width: $mq2){
+            text-align: center;
+            width: 100%;
+        }
+    }
+    &-link{
+        position: relative;
+        font-size: 18px;
+        line-height: 32px;
+        font-family: 'GothamPro-400', sans-serif;
+        color: $white;
+        @media (min-width: $mq2){ margin: 0 $gap; }
+
+        &::before,
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: 4px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: $white;
+            transition: $transition;
+        }
+        &::after{
+            width: 0;
+            background-color: $cyan;
+        }
+        &:hover::after{
+            width: 100%;
+            transition: $transition;
+        }
+    }
+}

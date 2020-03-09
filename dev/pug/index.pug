@@ -1,0 +1,44 @@
+doctype html
+html(lang="es", dir="ltr")
+    head
+        meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+        meta(charset="utf-8")     
+        meta(name="author", content="Ricardo Oliva Alonso")
+        meta(name="title", content="Ricardo Oliva Alonso | Desarrollador Web | Chevron ")
+        meta(name="description", content="Hola soy desarrollador web y esta página esta basada en Chevron.")
+        meta(name="robots", content="index, follow")
+        title Ricardo Oliva Alonso | Desarrollador Web | Chevron
+           
+        meta(name="theme-color", content="#ffffff")      
+        link(rel="stylesheet", href="css/styles.css")  
+        link(href="img/favicon.png", rel="shorcut icon", type="image/x-icon")
+        link(rel="stylesheet", href="css/fonts.css")  
+            
+        script( src="js/reveal.min.js", defer)
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        script(src="https://www.googletagmanager.com/gtag/js?id=UA-127993073-2", async )
+        script.
+           window.dataLayer = window.dataLayer || [];
+           function gtag(){dataLayer.push(arguments);}
+           gtag('js', new Date());
+           gtag('config', 'UA-127993073-2');
+
+    body
+        div.Container
+            include header.pug
+            include banner.pug
+            main.Main
+                include video.pug
+                include about.pug
+                include services.pug
+                include newsletter.pug
+            include news.pug
+            include contact.pug
+            include footer.pug
+    
+        script( src="js/main.js", defer)
+    
+
+
+
+    

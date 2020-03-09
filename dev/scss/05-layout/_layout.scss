@@ -1,0 +1,54 @@
+.Container{
+    @include flex(flex, center, center, column, wrap);
+}
+.Video,
+.About,
+.Services,
+.Newsletter,
+.News,
+.Contact{
+    @include flex(flex, center, center, column, wrap);
+    width: 100%;
+    padding: $gap;
+    @media (min-width: $mq4){ padding: $gap-2 ; }
+}
+/*==========*/
+.Header{
+    @include flex(flex, center, center, row, nowrap);
+    height: 80px;
+    width: 100%;
+    position: relative;
+    padding: 0 $gap;
+    background-color: $white;
+}
+.Banner{
+    width: 100%;
+    height: calc( 100vmax + 260px );
+    position: relative;
+    @media (min-width: $mq2){
+        width: 100%;
+        min-height: 575px;
+        height: 100vh;
+        max-height: 680px;
+    }
+}
+.About{ padding: 0 $gap; }
+.Contact{
+    background-color: $blue-1;
+    color: $white;
+    @media (min-width: $mq2){ padding: $gap-2 ; }
+}
+.News{
+    padding: $gap 0;
+    background-color: $cyan;
+}
+.Footer{
+    @include flex(flex, center, center, row, wrap);
+    width: 100%;
+    padding-bottom: 20px;
+    font-size: 11px;
+    font-family: 'GothamPro-500', sans-serif;
+    line-height: 18px;
+    background-color: $blue-1;
+    color: $white;
+}

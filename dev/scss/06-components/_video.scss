@@ -1,0 +1,41 @@
+.Video{
+
+    &-description,
+    &-transcript{
+        max-width: 600px;
+        margin: $gap / 2 0 $gap;
+        text-align: center;
+        font-size: 18px;
+        line-height: 32px;
+        font-weight: 400;
+        color: $black;
+    }
+    &-description{ font-family: 'GothamPro-500', sans-serif; }
+    &-transcript{
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 26px;
+        color: $blue-2;
+    }
+
+    &-image{ max-width: 100%; }
+
+    &-bg{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    &-icon{
+        position: absolute;
+        width: 12vw;
+        min-width: 100px;
+        max-width: 250px;
+        object-fit: contain;
+        cursor: pointer;
+        opacity: .8;
+
+        &:hover{ opacity: 1; }
+
+    }
+}

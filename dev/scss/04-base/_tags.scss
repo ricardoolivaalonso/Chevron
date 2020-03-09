@@ -1,0 +1,21 @@
+body{
+    font-family: 12px;
+    font-family: 'GothamPro-700', sans-serif;
+    color: $black;
+    text-rendering: optimizeLegibility;
+    text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    background-color: $gray;
+}
+main{
+    width: 100%;
+    max-width: $max-width;
+}
+input{
+    font-family: 'GothamPro-700', sans-serif;
+}
+ul{ list-style: none; }
+a{
+    text-decoration: none;
+    color: $black;
+}
